@@ -2,41 +2,88 @@
 
 var game = {
     music: "98_Lost_Mine.mp3",
-    background_image: "intro-bg.jpg",
+    background_image: "bed.jpg",
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You Awake in the Morning Feeling Sluggish",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Get up and Walk About",
+                    nextLevel: "Hallway",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Go back to sleep",
+                    nextLevel: "Dreamland",
                 },
             ]
         },
 
-        cave: {
-            background_image: "fire.gif",
+        Hallway: {
+            background_image: "hallway.jpg",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "You Hear Voices Amongst the Walls",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Run Away and Sleep",
+                    nextLevel: "Dreamland",
+                },
+                
+                {
+                    text: "Encounter the voice Behind the Madness",
+                    nextLevel: "Satan_Room",
+                },
+            ]
+        },
+        
+        Satan_Room: {
+            background_image: "j.jpg",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "You Encounter Satan",
+            choices: [
+                {
+                    text: "Face Your Fears",
+                    nextLevel: "Succeed",
+                },
+                
+                {
+                    text: "Give Up",
+                    nextLevel: "Pawn_Room",
+                },
+            ]
+        },
+        
+        Pawn_Room: {
+            background_image: "pawn.jpg",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "You Become a Pawn of Satan",
+            choices: [
+                {
+                    text: "Relapse",
+                    nextLevel: "start",
+                },
+            ]
+        },
+        
+        Succeed: {
+            background_image: "sus.jpg",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "Success",
+            choices: [
+                {
+                    text: "You Are Freed",
                     nextLevel: "start",
                 },
             ]
         },
 
-        field: {
-            message: "Some adventurer you are...",
+        Dreamland: {
+            background_image: "d.jpg",
+            message: "As you Drift off you Begin to Dream",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Relapse",
                     nextLevel: "start",
                 },
             ]
